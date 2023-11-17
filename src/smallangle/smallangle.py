@@ -1,3 +1,5 @@
+# a programme that uses click to print either the sin or tan of a certain number of values between 0 to 2pi 
+
 import click
 import numpy as np
 from numpy import pi
@@ -14,10 +16,10 @@ def cmd_group():
     "--number",
     "-n",
     default=10,
-    help="Number of x values evenly spaced between 0 and 2pi.",
+    help="Number of x values between 0 and 2pi.",
     show_default=True)
 def sin(number):
-    """print sin of *number* values between 0 and 2pi
+    """print sin of *number* values evenly spaced between 0 and 2pi
 
     Args:
         number (int): 0 and 2pi is evenly divided into *number* values inbetween
@@ -36,7 +38,7 @@ def sin(number):
     help="Number of x values between 0 and 2pi.",
     show_default=True)
 def tan(number):
-    """print tan of *number* values between 0 and 2pi
+    """print tan of *number* values evenly spaced between 0 and 2pi
 
     Args:
         number (int): 0 and 2pi is evenly divided into *number* values inbetween
