@@ -25,9 +25,12 @@ def sin(number):
         number (int): 0 and 2pi is evenly divided into *number* values inbetween
     """
     x = np.linspace(0, 2 * pi, number)
-    df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
-    print(df)
-    return
+
+    # check if number is integer
+    if type(number) == int:
+        df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
+        print(df)
+        return
 
 # add subcommand to calculate tan
 @cmd_group.command()
@@ -44,9 +47,12 @@ def tan(number):
         number (int): 0 and 2pi is evenly divided into *number* values inbetween
     """
     x = np.linspace(0, 2 * pi, number)
-    df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
-    print(df)
-    return
+
+    # check if number is integer
+    if type(number) == int:
+        df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
+        print(df)
+        return
 
 if __name__ == "__main__":
     cmd_group()
